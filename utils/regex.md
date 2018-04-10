@@ -6,3 +6,7 @@ cat [error_logs] | grep -E "\\[([a-zA-Z]{3} ){2}[0-9]{2} ([0-9]{2}:){2}[0-9]{2}\
 ```Shell
 cat [error_logs] | grep -E "\\[pid [0-9]*\\] "
 ```
+## Regex to get the URI of the event:
+```Shell
+cat [error_logs] | grep -E "\\[uri \"\/.*\"\\] " | grep # | grep -E "\"\/.*\""
+```
